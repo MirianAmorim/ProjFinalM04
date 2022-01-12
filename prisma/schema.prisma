@@ -12,7 +12,9 @@ datasource db {
 
 model Usuario {
   id          Int           @default(autoincrement()) @id @unique
-  nome        String 
+  nome        String
+  sobrenome   String
+  username    String 
   imagem      String
   bio         String
   nasc        String
@@ -48,6 +50,7 @@ model CategoriaDoTweet {
   tweetid   Int
   categoria Categoria     @relation(fields: [categoriaid], references: [id])
   categoriaid Int
+
   @@id([categoriaid, tweetid])
 }
 
@@ -56,6 +59,7 @@ model Favoritos {
    tweetid   Int   
    usuario     Usuario       @relation(fields: [usuarioid], references: [id])
    usuarioid   Int
+
    @@id([usuarioid, tweetid])
 }
 
