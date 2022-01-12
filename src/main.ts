@@ -6,9 +6,7 @@ import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe()); //necessario para usar o @decorators
-
   app.enableCors();
-
   const config = new DocumentBuilder()
     .setTitle('Rede social')
     .setDescription('Rede social com user, tweet, seguidores, seguindo, favoritos e categoria do tweet.')
@@ -17,8 +15,6 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
-
-  //app.enableCors();
   await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
