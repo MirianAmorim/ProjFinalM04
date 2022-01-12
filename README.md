@@ -1,7 +1,7 @@
 Api para controle de rede social tipo Tweeter.
 
 Ferramentas utilizadas: 
-PRISMA, NEST, @nest/client, SWAGGER, THUNDERCLIENT e BCRYPT. (obs.: se esqueci de algum, favor marcar aqui nesse parenteses para eu me lembrar....)
+PRISMA, NEST, @nest/client, SWAGGER, THUNDERCLIENT e BCRYPT.
 Swagger rodando em http://localhost:3000/api
 
 Todas as rotas possuem crud completo, ou seja, Create, Read, Update(Patch) e Delete.
@@ -14,4 +14,4 @@ A rota GET /tweet e /tweet/id estão com acesso livre para consulta. As rotas PO
 
 As rotas GET /seguidores, /seguidores/id e GET /seguindo, /seguindo/id estão liberadas para consultas. As rotas POST /seguidores e /seguindo, PATCH /seguidores/id e /seguindo/id e DELETE /seguidores/id e /seguindo/id estão autenticadas com "@UseGuards(AuthGuard('jwt'))", onde somente serão acessadas com usuários válidados pelo token de acesso gerado pelo JWT.
 
-Projeto feito deploy no Heroku, acesso pelo link: https://projeto3m4.herokuapp.com/
+Projeto feito deploy no Heroku, acesso pelo link: https://proj-final-m04.herokuapp.com/
