@@ -8,7 +8,7 @@ export class CreateUsuarioDto {
   @IsNotEmpty()
   @IsString()
   @ApiProperty({
-    example: 'Hudson Oliveira',
+    example: 'Mirian Amorim',
     description: `O nome será utilizado para identificar o usuário.` ,
   })
   nome: string;
